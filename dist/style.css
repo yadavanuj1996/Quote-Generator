@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond&display=swap");
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #31A086;
+}
+
+#quote-box {
+  background-color: #ffffff;
+  border-radius: 2%;
+  padding: 2% !important;
+  font-family: "EB Garamond", serif;
+}
+@media (min-width: 320px) {
+  #quote-box {
+    font-size: 12px;
+  }
+}
+@media (min-width: 576px) {
+  #quote-box {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) {
+  #quote-box {
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  #quote-box {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1200px) {
+  #quote-box {
+    font-size: 16px;
+  }
+}
+
+#text {
+  color: #31A086;
+}
+@media (min-width: 320px) {
+  #text {
+    font-size: 22px;
+  }
+}
+@media (min-width: 576px) {
+  #text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  #text {
+    font-size: 23px;
+  }
+}
+@media (min-width: 992px) {
+  #text {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  #text {
+    font-size: 28px;
+  }
+}
+
+#author {
+  color: #31A086;
+  text-align: right;
+}
+
+button {
+  background-color: #31A086;
+  border: none;
+}
+
+#bottom-div a {
+  background-color: #31A086;
+  padding: 5px 10px 5px 10px;
+  color: #ffffff !important;
+  cursor: all-scroll;
+}
+
+#tweet-quote {
+  float: left;
+  border-radius: 18%;
+}
+
+#insta-share-quote {
+  float: left;
+  margin-left: 10px !important;
+  border-radius: 18%;
+}
+
+#new-quote {
+  float: right;
+  font-weight: bold;
+}

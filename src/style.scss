@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+
+  $theme-color: #31A086;
+  $theme-font: 'EB Garamond', serif;
+
+
+html,body {
+  height: 100%;
+  width: 100%;
+  background-color: $theme-color;
+}
+
+#quote-box{
+  background-color: #ffffff;
+  border-radius: 2%;
+  padding: 2% !important;
+  font-family: $theme-font;
+  //Extra Small devices (landscape phones, 320px and up)
+  @media (min-width: 320px) { font-size: 12px; }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { font-size: 10px; }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) { font-size: 12px; }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { font-size: 13px; }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { font-size: 16px; }
+ 
+}
+#text{
+  // Extra Small devices (landscape phones, 320px and up)
+  @media (min-width: 320px) { font-size: 22px; }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { font-size: 20px; }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) { font-size: 23px; }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { font-size: 25px; }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { font-size: 28px; }
+ 
+  color: $theme-color;
+}
+#author{
+  color: $theme-color;
+  text-align: right;
+}
+button{
+  background-color: $theme-color;
+  border: none;
+}
+#bottom-div{
+  a{
+    background-color: $theme-color;
+    padding: 5px 10px 5px 10px;
+    color: #ffffff !important;
+    cursor: all-scroll;
+  }  
+}
+
+#tweet-quote{
+  float: left;
+  border-radius: 18%; 
+}
+#insta-share-quote{
+  float: left;
+  margin-left: 10px !important;
+  border-radius: 18%; 
+}
+#new-quote{
+  float: right;
+  font-weight: bold;
+}
