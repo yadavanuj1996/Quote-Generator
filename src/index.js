@@ -1,3 +1,8 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.scss';
+
 const DEFAULT_STATE={
   quote: `When everything seems to be going against you, remember that the airplane takes off against the wind, not with it. `,
   author: `Henry Ford`,
@@ -24,12 +29,12 @@ var quotes=[
     author: 'Bill Gates'
   },
   {
-    quote: `No, I don't ever give up. I'd have to be dead or completely incapacitated.',
-    author: 'Elon Musk`,
+    quote: `No, I don't ever give up. I'd have to be dead or completely incapacitated.`,
+    author: `Elon Musk`
   },
   {
-    quote: `We're here to put a dent in the universe. Otherwise why else even be here?',
-    author: 'Steve Jobs`,
+    quote: `We're here to put a dent in the universe. Otherwise why else even be here?`,
+    author: `Steve Jobs`
   
   }
 ];
@@ -40,9 +45,7 @@ class QuoteMachine extends React.Component{
     this.state=DEFAULT_STATE;
     this.changeQuote=this.changeQuote.bind(this);
   }
-    componentWillUpdate() {
-   
-    }
+  
   changeQuote(){
     let randomNum=Math.floor(Math.random()*(quotes.length));
     this.setState({
@@ -88,20 +91,20 @@ class QuoteMachine extends React.Component{
   render(){
     return(
       <div>
-        <p id="text" class="text-center">“{this.state.quote}”</p>
-        <p id="author">-{this.state.author}</p>
-        <div id="bottom-div" class="row">
-        <div class="col col-6">
+        <QuoteText quote={this.state.quote}/>
+        <AuthorName author={this.state.author} />
+        <div id="bottom-div" className="row">
+        <div className="col col-6">
           <a id="tweet-quote" href="http://www.twitter.com/intent/tweet" target="_blank">
-                    <i class="fab fa-twitter"></i>   
+                    <i className="fab fa-twitter"></i>   
                   </a>
           <a id="insta-share-quote" href="#">
-                    <i class="fab fa-instagram"></i>   
+                    <i className="fab fa-instagram"></i>   
                   </a>
           <div>
           </div>
         </div>
-        <div class="col col-6">
+        <div className="col col-6">
           <a onClick={this.changeQuote} id="new-quote">New Quote</a>
         </div>
       </div>
@@ -110,4 +113,26 @@ class QuoteMachine extends React.Component{
   }
 }
 
-ReactDOM.render(<QuoteMachine />,document.getElementById("quote-box"));
+class QuoteText extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return (
+      <p id="text" className="text-center">“{this.props.quote}”</p>
+    );
+  }
+}
+
+class AuthorName extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return (
+      <p id="author">-{this.props.author}</p>
+    );
+  }
+}
+
+render(<QuoteMachine />,document.getElementById("quote-box"));
